@@ -20,25 +20,25 @@ This data set provides you with information about customer preferences (age, gen
 After loading the dataset, select some features for the modeling. Also, we change the target data type to be an integer, as it is a requirement by the scikit-learn algorithm.
 For this project, we can use a subset of the fields available to develop our model. Let us assume that the fields we use are 'tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip', and of course 'churn'.
 
-```
+```python
 churn_df = churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip', 'churn']]
 churn_df['churn'] = churn_df['churn'].astype('int')
 churn_df
 ```
 
 For modeling the input fields X and the target field y need to be fixed. Since the target to be predicted is 'churn', the data under this field will be stored under the variable 'y'. We may use any combination or all of the remaining fields as the input. Store these values in the variable 'X'.
-```
+```python
 X = np.asarray(churn_df[['tenure', 'age', 'address', 'income', 'ed', 'employ', 'equip']])
 X[0:5]  #print the first 5 values
 ```
 
-```
+```python
 y = np.asarray(churn_df['churn'])
 y[0:5] #print the first 5 values
 ```
 
 It is also a norm to standardize or normalize the dataset in order to have all the features at the same scale. This helps the model learn faster and improves the model performance. We may make use of StandardScalar function in the Scikit-Learn library.
-```
+```python
 X_norm = StandardScaler().fit(X).transform(X)
 X_norm[0:5]
 ```
