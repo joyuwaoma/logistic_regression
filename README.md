@@ -1,4 +1,5 @@
 # logistic_regression
+![LgR](https://github.com/joyuwaoma/logistic_regression/blob/main/LgR.png)
 
 ## Objective:
 1. Use Logistic Regression for classification
