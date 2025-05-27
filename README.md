@@ -46,3 +46,4 @@ X_norm[0:5]
 ## Splitting the dataset:
 The trained model has to be tested and evaluated on data which has not been used during training. Therefore, it is required to separate a part of the data for testing and the remaining for training. For this, we may make use of the train_test_split function in the scikit-learn library.
 
+
